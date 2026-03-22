@@ -1,0 +1,22 @@
+engine1:    C:\Users\jackm\Downloads\variantfishtest-master\variantfishtest-master\fairy-stockfish-largeboard_x86-64-modern.exe
+engine2:    C:\Users\jackm\Downloads\variantfishtest-master\variantfishtest-master\fairy-stockfish-largeboard_x86-64-modern.exe
+e1-options: {}
+e2-options: {}
+variants:   ['chess']
+config:     None
+# of games: 1
+sprt:       False
+time:       10000
+increment:  100
+book:       None
+------------------------
+Total: 1 W: 1 L: 0 D: 0 
+Total: 2 W: 1 L: 0 D: 1 
+------------------------
+Stats:
+draw rate: 0.50
+time losses engine1: 0
+time losses engine2: 0
+
+
+Total: 2 W: 1 L: 0 D: 1
