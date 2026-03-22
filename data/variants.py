@@ -26,32 +26,33 @@ STANDARD_CHESS = VariantConfig(
 
 # ---------------------------------------------------------------------------
 # One Centaur — mirrors variants.ini [onecentaur:chess]
-# Black's two middle pawns are replaced by centaurs (char 't').
+# Black's two middle pawns (d7, e7) are replaced by centaurs (char 't').
 # ---------------------------------------------------------------------------
 ONE_CENTAUR = VariantConfig(
     name="onecentaur",
     base="chess",
     pieces=[CENTAUR],
-    start_fen="rnbqkbnr/ppptttppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1",
+    start_fen="rnbqkbnr/pppttppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1",
 )
 
 # ---------------------------------------------------------------------------
-# Chancellor Chess — replaces queens with chancellors on both sides
+# Chancellor Chess — replaces queens with chancellors on both sides.
+# Back rank: r n b c k b n r  (chancellor on d-file, 8 pieces total)
 # ---------------------------------------------------------------------------
 CHANCELLOR_CHESS = VariantConfig(
     name="chancellorchess",
     base="chess",
     pieces=[CHANCELLOR],
-    start_fen="rnbckcbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBCKCBNR w KQkq - 0 1",
+    start_fen="rnbckbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBCKBNR w KQkq - 0 1",
 )
 
 # ---------------------------------------------------------------------------
-# Capablanca-style — adds archbishop (bishop+knight) and chancellor (rook+knight)
-# on a standard 8x8 board as queen replacements
+# Capablanca 8x8 — knights replaced by archbishop (m) and chancellor (c).
+# Back rank: r m b q k b c r  (archbishop on b-file, chancellor on g-file)
 # ---------------------------------------------------------------------------
 CAPABLANCA_8 = VariantConfig(
     name="capablanca8",
     base="chess",
     pieces=[ARCHBISHOP, CHANCELLOR],
-    start_fen="rmbqkcmnr/pppppppp/8/8/8/8/PPPPPPPP/RMBQKCMNR w KQkq - 0 1",
+    start_fen="rmbqkbcr/pppppppp/8/8/8/8/PPPPPPPP/RMBQKBCR w KQkq - 0 1",
 )
