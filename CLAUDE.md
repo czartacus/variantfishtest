@@ -86,3 +86,48 @@ Six Fairy-Stockfish `.exe` files are included in the repo root, distinguished by
 - `numpy` (for board array representation in GUI)
 - `pandas` (for experimental test scripts)
 - Fairy-Stockfish binaries (included as `.exe` files)
+
+## Project Direction (Important)
+
+This repository is evolving into a **roguelike chess autobattler RPG**, not just a testing harness.
+
+The existing codebase (variantfishtest, test scripts, GUI prototypes) should be treated as:
+- Experimental scaffolding
+- Reference implementations for engine interaction
+- Tools for balancing and simulation
+
+### Long-term goals
+
+- Automated AI vs AI battles driven by Fairy-Stockfish
+- Custom chess pieces defined via Betza notation and variants.ini
+- A progression system where players:
+  - Build teams / armies (custom piece sets)
+  - Upgrade pieces over time
+  - Unlock new mechanics and variants
+- Procedural or semi-procedural battle setups
+- Visualisation via Pygame (or similar)
+
+### Architectural direction
+
+The project should gradually move toward a modular structure:
+
+- `engine/` → communication with Fairy-Stockfish (UCI layer)
+- `game/` → rules, board state, piece definitions
+- `ai/` → orchestration of battles (engine vs engine logic)
+- `ui/` → rendering, animation, interaction
+- `data/` → variants.ini, piece definitions, configs
+
+### Guidance for modifications
+
+- Do NOT tightly couple new features to `variantfishtest.py`
+- Prefer extracting reusable components (engine wrapper, game loop)
+- Treat current scripts as prototypes to refactor, not final architecture
+- Prioritise building reusable systems over one-off experiments
+
+### Current priority
+
+Focus on building a **clean engine-vs-engine battle loop** that can:
+- Load a FEN or variant
+- Run a full game deterministically
+- Output a move list and result
+- Be reused later by the RPG layer
